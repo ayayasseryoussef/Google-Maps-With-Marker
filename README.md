@@ -31,12 +31,9 @@ dependencies:
   dio: ^5.4.0
 
 
-Note: Here what is used is from Google Cloud Console for safety.
-
 🔑 Google Maps API Key Setup
 
-Go to Google Cloud 
-.
+Go to Google Cloud.
 
 Create or select a project.
 
