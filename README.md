@@ -29,3 +29,65 @@ dependencies:
   google_maps_flutter_web: ^0.5.4+2
   location: ^5.0.0
   dio: ^5.4.0
+
+
+Note: Here what is used is from Google Cloud Console for safety.
+
+🔑 Google Maps API Key Setup
+
+Go to Google Cloud 
+.
+
+Create or select a project.
+
+Enable the following APIs:
+
+Maps SDK for Android
+
+Maps JavaScript API
+
+Directions API
+
+Create an API Key.
+
+Add the API Key to the platform files:
+
+Android
+
+In android/app/src/main/AndroidManifest.xml:
+
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+<meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="YOUR_ANDROID_API_KEY"/>
+
+Web
+
+In web/index.html:
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_WEB_API_KEY&libraries=places"></script>
+
+🧩 How it Works
+
+On app start:
+
+Displays user’s current location.
+
+On tap:
+
+Adds a destination marker.
+
+Draws a polyline route between the user’s current location and the tapped destination.
+
+The user’s marker updates in real-time as the device location changes.
+
+▶️ Run the Project
+flutter pub get
+flutter run
+
+
+To run on Web:
+
+flutter run -d chrome
